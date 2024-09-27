@@ -1,6 +1,7 @@
 package org.launchcode;
 
 import javax.xml.transform.Source;
+import java.lang.reflect.Array;
 import java.util.Collections;
 import java.util.Arrays;
 import java.util.ArrayList;
@@ -37,6 +38,19 @@ public class ArrayListPractice {
 
         int evenSum = sumEven(numArray);
         System.out.println("The total sum of even numbers: " + evenSum);
+
+
+
+
+
+//    String[] words = {"bike", "tacos", "tiger", "ring", "celebrate", "candy", "cat", "dogs"};
+//
+//        public static void printFiverLetterWords(ArrayList<String> words) {
+//            for (String word : words) {
+//                 if (word.length() == 5) {
+//                     System.out.println(word);
+//            }
+//        }
 
 
     }
