@@ -1,15 +1,10 @@
 package org.launchcode;
 
-import javax.xml.transform.Source;
-import java.lang.reflect.Array;
-import java.util.Collections;
-import java.util.Arrays;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class ArrayListPractice {
-    public static int sumEven(ArrayList<Integer> arr) {
 
+    public static int findSumEvenNumbers(ArrayList<Integer> arr){
         int total = 0;
         for (int integer : arr) {
             if (integer % 2 == 0) {
@@ -18,71 +13,59 @@ public class ArrayListPractice {
         }
         return total;
     }
-
-    public static void main(String[] args) {
-
-        ArrayList<Integer> numArray = new ArrayList<>();
-
-        numArray.add(1);
-        numArray.add(5);
-        numArray.add(6);
-        numArray.add(23);
-        numArray.add(7);
-        numArray.add(34);
-        numArray.add(67);
-        numArray.add(2);
-        numArray.add(8);
-        numArray.add(90);
-        numArray.add(32);
-        numArray.add(45);
-
-        int evenSum = sumEven(numArray);
-        System.out.println("The total sum of even numbers: " + evenSum);
-
-
-
-
-
-//    String[] words = {"bike", "tacos", "tiger", "ring", "celebrate", "candy", "cat", "dogs"};
-//
-//        public static void printFiverLetterWords(ArrayList<String> words) {
-//            for (String word : words) {
-//                 if (word.length() == 5) {
-//                     System.out.println(word);
+//    public static String wordsWithFiveLetters(ArrayList<String> arr){
+//        String wordList = "";
+//        for (String word : arr) {
+//            if (word.length() == 5) {
+//                wordList += word;
 //            }
 //        }
-
-
-    }
-//    public static void main(String[] args)  {
-//
-//        String words[] = {"bike", "tacos", "tiger", "ring", "celebrate", "candy", "cat", "dogs"};
-//        int searchTerm = 5;
-////        iterate through the array, if each word's length is equal to number of characters input then print out'
-//        for (String index : words) {
-//            if ()
-//        }
-//list result, print out results
-//
-////        ArrayList<String> wordsWithThatAmountOfLetters = new ArrayList<>();
-//////        ArrayList<Integer> wordLength = new ArrayList<>();
-////        Scanner input = new Scanner(System.in);
-////        String numChars;
-////
-////        for (wordsWithThatAmountOfLetters  : arr);
-////
-////        do {
-////            numChars = input.nextInt();
-////            if (numChars == wordlength) {
-////                System.out.println(wordsWithThatAmountOfLetters);
-////            }
-////        }
-////
-////        for (char i : arr) {
-////            if (word.length() == 5) {
-////                System.out.println(Arrays.toString(word));
-////            }
-////        }
-//
+//        return wordList;
 //    }
+public static String wordsWithFiveLetters(ArrayList<String> arr) {
+    StringBuilder wordList = new StringBuilder(); // Use StringBuilder for better performance
+    for (String word : arr) {
+        if (word.length() == 5) {
+            wordList.append(word).append("\n"); // Append the word and a newline
+        }
+    }
+    return wordList.toString(); // Convert StringBuilder to String
+}
+
+    public static void main(String[] args) {
+        ArrayList<Integer> numArray = new ArrayList<>();
+        numArray.add(42);
+        numArray.add(422);
+        numArray.add(4254);
+        numArray.add(424);
+        numArray.add(4);
+        numArray.add(72);
+        numArray.add(428);
+        numArray.add(9);
+        numArray.add(422);
+
+        System.out.println(findSumEvenNumbers(numArray));
+
+        int totalSumEvenNumbers = findSumEvenNumbers(numArray);
+
+        System.out.println("The total when adding all the even numbers is " + totalSumEvenNumbers);
+
+        ArrayList<String> randomWords = new ArrayList<>();
+        randomWords.add("tacos");
+        randomWords.add("mate");
+        randomWords.add("steak");
+        randomWords.add("fish");
+        randomWords.add("toilet");
+        randomWords.add("purple");
+        randomWords.add("meats");
+        randomWords.add("legos");
+
+        System.out.println(wordsWithFiveLetters(randomWords));
+
+        String wordList = wordsWithFiveLetters(randomWords);
+
+        System.out.println("Below is a list of words with 5 letters: \n" + wordList);
+
+            }
+
 }

@@ -42,15 +42,15 @@ class BalancedBracketsTest {
         assertFalse(BalancedBrackets.hasBalancedBrackets("[LaunchCode"));
     }
 
-//    @Test
-//    public void singleLeftBracketReturnsFalse() {
-//        assertFalse(BalancedBrackets.hasBalancedBrackets("["));
-//    }
+    @Test
+    public void singleLeftBracketReturnsFalse() {
+        assertFalse(BalancedBrackets.hasBalancedBrackets("["));
+    }
 
-//    @Test
-//    public void rightBracketBeforeLeftReturnsFalse() {
-//        assertFalse(BalancedBrackets.hasBalancedBrackets("Launch]Code["));
-//    }
+    @Test
+    public void rightBracketBeforeLeftReturnsFalse() {
+        assertFalse(BalancedBrackets.hasBalancedBrackets("Launch]Code["));
+    }
 
     @Test
     public void singleRightBracketReturnsFalse() {

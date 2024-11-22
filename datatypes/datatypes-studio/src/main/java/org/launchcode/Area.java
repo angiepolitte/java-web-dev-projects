@@ -1,22 +1,24 @@
-package org.launchcode;
 
-import org.w3c.dom.ls.LSOutput;
+package org.launchcode;
 
 import java.util.Scanner;
 
 public class Area {
     public static void main(String[] args) {
+        Scanner input;
         double radius;
-        Scanner input = new Scanner(System.in);
+
+        input = new Scanner(System.in);
         System.out.println("Enter a radius: ");
         radius = input.nextDouble();
-        if (radius > 0) {
-            System.out.println("The area of a circle with radius " + radius + " is " + Circle.getArea(radius));
-        } else {
-            System.out.println("Please enter a positive number");
+        input.close();
 
-        }
-
-
+        System.out.println("The area of the circle is: " + Circle.getArea(radius));
     }
+
 }
+
+
+
+
+
